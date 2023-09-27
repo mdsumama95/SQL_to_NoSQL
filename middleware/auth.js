@@ -4,13 +4,14 @@ const User = require('../models/users'); // Assuming you have a Mongoose model f
 const authenticate = async (req, res, next) => {
     try {
         const token = req.header('Authorization');
-        if (!token) {
-            return res.status(401).json({ success: false, message: 'No token provided' });
-        }
+        console.log(token," ==== 7 auth");
+        // if (!token) {
+        //     return res.status(401).json({ success: false, message: 'No token provided' });
+        // }
         
         const decodedToken = jwt.verify(token, process.env.TOKEN_SECRET);
-        
-        const user = await User.findById(decodedToken.userId);
+        console.log(decodedToken.id," == =====13");
+        const user = await User.findById(decodedToken.id);
         
         if (!user) {
             return res.status(401).json({ success: false, message: 'User not found' });

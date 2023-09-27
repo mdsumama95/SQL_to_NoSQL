@@ -10,10 +10,6 @@ const userController = require('../controllers/user');
 const router = express.Router();
 router.use(express.static("frontend"));
 
-
-// router.get("/", expenseController.HomePage);
-
-// router.get("/", userController.LoginPage);
 router.post('/signup', userController.signup);
 router.post('/login', userController.login)
 

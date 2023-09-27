@@ -8,8 +8,8 @@ router.use(express.static("frontend"));
 
 // router.get("/", expenseController.HomePage);
 //authenticatemiddleware.authenticate
-router.post('/addExpense', expenseController.addExpense )
+router.post('/addExpense',authenticatemiddleware.authenticate, expenseController.addExpense )
 
-router.get('/getexpenses', expenseController.getexpenses)
-router.delete('/deleteExpense/:expenseid',  expenseController.deleteExpense)
+router.get('/getexpenses',authenticatemiddleware.authenticate, expenseController.getexpenses)
+router.delete('/deleteExpense/:expenseid', authenticatemiddleware.authenticate, expenseController.deleteExpense)
 module.exports = router;

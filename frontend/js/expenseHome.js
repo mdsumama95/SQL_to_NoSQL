@@ -215,12 +215,12 @@ function showError(err){
     document.body.innerHTML += `<div style="color:red;"> ${err}</div>`
 }
 
-// function removeExpensefromUI(expenseid){
-//     const expenseElemId = document.getElementById(listOfExpenses);
-//     console.log(expenseElemId);
-//     // const expenseElemId = `${expenseid}`;
-//     // document.getElementById(expenseElemId).remove();
-// }
+function removeExpensefromUI(expenseid){
+    const expenseElemId = document.getElementById(listOfExpenses);
+    console.log(expenseElemId);
+    // const expenseElemId = `${expenseid}`;
+    // document.getElementById(expenseElemId).remove();
+}
 
 document.getElementById('rzp-button1').onclick = async function (e) {
     // console.log("hello")
