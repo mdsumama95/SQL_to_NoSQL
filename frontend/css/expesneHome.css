@@ -1,0 +1,22 @@
+#bd {
+    background-color: #dcfffc;
+}
+body {
+    background-color: #f3fffc;
+ }
+ .custom-table {
+    width: 100%;
+    border-collapse: collapse;
+    
+}
+
+.custom-table th {
+    background-color: #bee5f1;
+    border-radius: 1px;
+}
+.custom-table {
+    background-color: rgb(222, 255, 248);
+}
+
+ 
+ 

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/report.css">
+    <title>Reports</title>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light " style="background-color: #dcfffc;">
+        <a class="navbar-brand" href="../html/expesneHome.html">Expanse</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="../html/expesneHome.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../html/signup.html">New user</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="../html/leaderboard.html">LeaderBoard</a>
+              </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../html/login.html">Logout</a>
+            </li>
+            
+          </ul>
+        </div>
+      </nav>
+    <div class="pl-lg-5 ml-lg-5  pt-5">
+      <table class="table custom-table" >
+        <thead>
+            <tr>
+                <th>amount</th>
+                <th>description</th>
+                <th>category</th>
+            </tr>
+        </thead>
+        <h3 >Daily Expense</h3>
+        <tbody id="dailyExpense">
+            <!-- Your table body content goes here -->
+        </tbody>
+     </table>
+     <table class="table custom-table" >
+      <thead>
+          <tr>
+              <th>amount</th>
+              <th>description</th>
+              <th>category</th>
+          </tr>
+      </thead>
+      <h3 class="mt-5">Weekly Expense</h3>
+      <tbody id="weeklyExpense">
+          <!-- Your table body content goes here -->
+      </tbody>
+     </table>
+  
+    </div>
+    
+    <!-- <div id="reports" class="mt-2 ml-2">
+        <h3>Daily Expense</h3>
+        <div id="dailyExpense" class="mt-2 ml-2">   
+        </div>
+        <h4>Weekly Expense</h4>
+        <div id="weeklyExpense">
+
+        </div>
+    </div> -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.1.3/axios.min.js" integrity="sha512-0qU9M9jfqPw6FKkPafM3gy2CBAvUWnYVOfNPDYKVuRTel1PrciTj+a9P3loJB+j0QmN2Y0JYQmkBBS8W+mbezg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="../js/report.js"></script>
+</body>
+</html>
