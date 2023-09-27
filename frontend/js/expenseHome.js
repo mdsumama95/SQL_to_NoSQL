@@ -92,23 +92,10 @@ function addNewExpensetoUI(expense){
 
 
 
-    // const headers = ['id', 'amount', 'description', 'category'];
-
-    // headers.forEach(headerText => {
-    //   const headerCell = document.createElement('th');
-    //   headerCell.textContent = headerText;
-    //   headerRow.appendChild(headerCell);
-    // });
 
 // Append the header row to the table head
     tableHead.appendChild(headerRow);
-
-    // if(isActive){
-    //  table.appendChild(tableHead);
-    //  isActive = false;
-    // }
-
-   
+  
     const tableBody = document.createElement('tbody');
 
 // Sample data for the table
@@ -209,6 +196,7 @@ async function deleteExpense(e,expenseid) {
             throw new Error('Failed to delete');
         }
     }catch (err) {
+
         console.log(err);
     } 
 }
@@ -227,14 +215,17 @@ function showError(err){
     document.body.innerHTML += `<div style="color:red;"> ${err}</div>`
 }
 
-function removeExpensefromUI(expenseid){
-    const expenseElemId = `${expenseid}`;
-    document.getElementById(expenseElemId).remove();
-}
+// function removeExpensefromUI(expenseid){
+//     const expenseElemId = document.getElementById(listOfExpenses);
+//     console.log(expenseElemId);
+//     // const expenseElemId = `${expenseid}`;
+//     // document.getElementById(expenseElemId).remove();
+// }
 
 document.getElementById('rzp-button1').onclick = async function (e) {
     // console.log("hello")
-    const response  = await axios.get('http://localhost:3000/purchase/premiumMemberShip', { headers: {"Authorization" : token} });
+    const userEmail = localStorage.getItem('userEmail');
+    const response  = await axios.get('http://localhost:3000/purchase/premiumMemberShip', { headers: {"Authorization" : token,email:userEmail} });
     console.log(response,"hello");
     var options =
     {

@@ -15,6 +15,10 @@ const expenseSchema = new mongoose.Schema({
         ref: "User",
         required: true,
     },
+    createdAt: {
+        type: String,
+        required: true,
+      },
 });
 
 const Expense = mongoose.model('Expense', expenseSchema);

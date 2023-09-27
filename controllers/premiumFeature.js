@@ -110,7 +110,7 @@ const getReport = async (req, res) => {
     // Use Mongoose queries to retrieve expenses
     const result = await Expense.find({
       userId: userId,
-      // createdAt: { $gt: todayDate, $lt: Now }
+      createdAt: { $gt: todayDate, $lt: Now }
     });
      console.log(result, "==== 115");
     res.status(201).json(result);
@@ -134,7 +134,7 @@ const getWeeklyReport = async (req, res) => {
     // Use Mongoose queries to retrieve weekly expenses
     const result = await Expense.find({
       userId: userId,
-      // createdAt: { $gt: weeklyExpense, $lt: Now }
+      createdAt: { $gt: weeklyExpense, $lt: Now }
     });
 
     res.status(201).json(result);

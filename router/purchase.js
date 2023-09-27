@@ -4,7 +4,7 @@ const authenticatemiddleware = require("../middleware/auth");
 
 const router = express.Router();
 
-router.get("/premiumMemberShip",authenticatemiddleware.authenticate,purchaseMembership.premiumMemberShip);
+router.get("/premiumMemberShip",purchaseMembership.premiumMemberShip);
 
 router.post("/updateTransactionStatus",authenticatemiddleware.authenticate,purchaseMembership.updateTransactionStatus);
 

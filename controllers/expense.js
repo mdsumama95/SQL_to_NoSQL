@@ -18,7 +18,13 @@ const addExpense = async (req, res) => {
 
         console.log(user._id,"======= ======== ==== 11");
         const userId = user._id;
-        const newExpense = new Expense({ amount,  category, description, userId });
+        const newExpense = new Expense({ 
+            amount,  
+            category, 
+            description, 
+            userId,
+            createdAt: new Date()
+         });
         console.log(newExpense,"===== newExpense");
         await newExpense.save();
 
@@ -35,27 +41,7 @@ const addExpense = async (req, res) => {
     }
 };
 
-// const addExpense = async (req, res) => {
-//     try {
-//         const { amount, description, category } = req.body;
-       
-//         console.log(req.headers.email, " ======= 8 =========");
-//         const userEmail = req.headers.email;
-//         const user = await User.findOne({ email: userEmail });
-//         console.log(user._id,"======= ======== ==== 11");
-//         const userId = user._id;
-//         const newExpense = new Expense({ amount,  category, description, userId });
-//         console.log(newExpense,"===== newExpense");
-//         await newExpense.save();
-//         // console.log(req.user.expenses, 'req.user.expenses');
-//         user.expenses.push(newExpense);
-//         await user.save();
-//         res.status(201).json({ expense: newExpense, success: true });
-//     } catch (error) {
-//         console.error(error);
-//         res.status(403).json({ success: false, error: error });
-//     }
-// };
+
 
 const getexpenses = async (req, res) => {
     try {
